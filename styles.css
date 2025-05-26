@@ -261,13 +261,18 @@ nav ul li a:hover::after {
     box-shadow: var(--shadow-medium);
 }
 
-.feature-item img {
-    width: 90px; /* Iconos más grandes */
-    height: 90px;
+/* ESTILO DE LOS ICONOS DE SERVICIOS (ANTES IMAGEN, AHORA FONT AWESOME) */
+.feature-item i { /* Cambio de img a i para Font Awesome */
+    font-size: 3.5em; /* Tamaño del icono */
     margin-bottom: 25px;
     background-color: var(--primary-color);
+    color: #ffffff; /* Color del icono */
     border-radius: 50%;
-    padding: 15px; /* Más padding dentro del círculo */
+    width: 90px; /* Tamaño del círculo de fondo */
+    height: 90px;
+    display: flex; /* Para centrar el icono dentro del círculo */
+    justify-content: center;
+    align-items: center;
     box-shadow: var(--shadow-light);
 }
 
@@ -513,16 +518,22 @@ footer {
     gap: 20px;
 }
 
-.social-links a img {
-    width: 40px; /* Iconos más grandes */
+/* ESTILO DE LOS ICONOS DE REDES SOCIALES (ANTES IMAGEN, AHORA FONT AWESOME) */
+.social-links a i { /* Cambio de img a i para Font Awesome */
+    font-size: 1.5em; /* Tamaño del icono */
+    width: 40px; /* Tamaño del círculo de fondo */
     height: 40px;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: rgba(255, 255, 255, 0.15); /* Fondo de icono más visible */
     border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff; /* Color del icono */
+    display: flex; /* Para centrar el icono dentro del círculo */
+    justify-content: center;
+    align-items: center;
 }
 
-.social-links a img:hover {
+.social-links a i:hover { /* Cambio de img a i */
     transform: translateY(-7px) rotate(5deg); /* Efecto más divertido */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
@@ -638,9 +649,11 @@ footer {
         font-size: 1.1em;
     }
 
-    .feature-item img {
+    /* Ajuste para los iconos en móviles, si fuera necesario */
+    .feature-item i { /* Cambiado de img a i */
         width: 70px;
         height: 70px;
+        font-size: 3em; /* Ajuste del tamaño del icono */
     }
 
     .step-number {
