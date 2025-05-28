@@ -1,20 +1,21 @@
-/* Variables CSS - Inspiración Canaria */
 :root {
-    --primary-color: #FF7F50; /* Coral vibrante, como el atardecer en el mar */
-    --secondary-color: #FFD700; /* Amarillo dorado, como el sol canario */
-    --accent-color: #4CAF50; /* Verde fresco, como la vegetación de las islas */
-    --dark-color: #36454F; /* Gris oscuro, como la arena volcánica */
-    --light-color: #F8F8F8; /* Gris muy claro, para fondos suaves */
-    --text-color: #333333; /* Color de texto principal */
-    --gray-text: #555555; /* Gris para texto secundario */
-    --border-color: #E0E0E0; /* Borde suave */
-    --font-heading: 'Montserrat', sans-serif; /* Más robusta para títulos */
-    --font-body: 'Poppins', sans-serif; /* Moderna y legible para el cuerpo */
-    --font-alt: 'Nunito', sans-serif; /* Para un toque extra de calidez */
-    --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 12px 24px rgba(0, 0, 0, 0.2);
-    --gradient-hero: linear-gradient(135deg, rgba(255, 127, 80, 0.8), rgba(255, 215, 0, 0.6)); /* Degradado cálido */
-    --gradient-section: linear-gradient(135deg, rgba(248, 248, 248, 0.9), rgba(255, 255, 255, 0.9)); /* Degradado suave */
+    --primary-color: #0033A0; /* Azul bandera canaria */
+    --secondary-color: #FFCC00; /* Amarillo bandera canaria */
+    --accent-color: #FFFFFF; /* Blanco puro */
+    --dark-color: #1A1A1A; /* Gris oscuro para contraste */
+    --light-color: #F5F5F5; /* Gris claro para fondos suaves */
+    --text-color: #222222; /* Texto principal */
+    --gray-text: #555555; /* Texto secundario */
+    --border-color: #DADADA; /* Bordes suaves */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-alt: 'Nunito', sans-serif;
+    --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+    /* Eliminamos los degradados originales para ajustarnos a los colores planos de la bandera */
+    --gradient-hero: var(--accent-color); /* Blanco para la primera sección */
+    --gradient-section: var(--light-color); /* Usaremos este para fondos generales si no especificamos otro */
 }
 
 /* Reset y Estilos Generales */
@@ -40,7 +41,11 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Enlaces en azul canario */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón para los enlaces */
 }
 
 ul {
@@ -101,9 +106,23 @@ p {
     position: relative; /* Para posibles fondos con formas */
 }
 
-.bg-light {
-    background: var(--gradient-section); /* Degradado suave en secciones claras */
+/* --- CLASES DE COLOR DE LA BANDERA --- */
+.section-white {
+    background-color: var(--accent-color); /* Blanco para la primera parte */
+    color: var(--text-color);
 }
+
+.section-blue {
+    background-color: var(--primary-color); /* Azul para "Nuestros Servicios" */
+    color: var(--accent-color); /* Texto blanco sobre fondo azul */
+}
+
+.section-yellow {
+    background-color: var(--secondary-color); /* Amarillo para "Cómo Funciona" */
+    color: var(--dark-color); /* Texto oscuro sobre fondo amarillo */
+}
+/* --- FIN CLASES DE COLOR DE LA BANDERA --- */
+
 
 /* Botones */
 .btn-primary, .btn-secondary {
@@ -120,22 +139,22 @@ p {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Botón principal en azul canario */
     color: #ffffff;
     border: 2px solid var(--primary-color);
     box-shadow: var(--shadow-light);
 }
 
 .btn-primary:hover {
-    background-color: var(--dark-color);
-    border-color: var(--dark-color);
+    background-color: #00257a; /* Variante más oscura del azul */
+    border-color: #00257a;
     transform: translateY(-5px); /* Efecto 3D */
     box-shadow: var(--shadow-medium);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Botón secundario con texto azul y borde azul */
     border: 2px solid var(--primary-color);
 }
 
@@ -148,13 +167,15 @@ p {
 
 /* Header - Hero Section */
 .hero {
-    background: var(--gradient-hero), url('https://via.placeholder.com/1920x800/87CEEB/FFFFFF?text=Paisaje+Canario+Cielo') no-repeat center center/cover; /* Imagen de cielo canario con degradado */
-    color: #ffffff;
+    /* El fondo del hero ahora será blanco (accent-color) y el texto oscuro para visibilidad */
+    background-color: var(--accent-color);
+    color: var(--text-color); /* Texto oscuro */
     padding: 180px 0 120px; /* Más espacio */
     text-align: center;
     position: relative;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Forma de onda en la parte inferior */
+    /* Mantenemos el clip-path si quieres la forma de onda, pero el fondo será blanco */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
 .hero-content {
@@ -165,10 +186,14 @@ p {
     z-index: 2; /* Asegura el contenido por encima del clip-path */
 }
 
+.hero-content h1 {
+    color: var(--dark-color); /* Título del hero en color oscuro para contraste */
+}
+
 .hero-content p {
     font-size: 1.6em; /* Más grande */
     margin-bottom: 50px;
-    color: #f0f0f0; /* Color más suave */
+    color: var(--gray-text); /* Color más suave para el párrafo */
     font-weight: 300;
     font-family: var(--font-alt); /* Fuente más cálida */
 }
@@ -187,8 +212,8 @@ nav .logo {
     font-family: var(--font-heading);
     font-size: 2.8em; /* Más grande */
     font-weight: 900; /* Extra bold */
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--primary-color); /* Logo en azul canario */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 nav .logo .highlight {
@@ -204,7 +229,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--dark-color); /* Enlaces del nav en color oscuro */
     font-weight: 600;
     font-size: 1.2em; /* Más grande */
     transition: color 0.3s ease, transform 0.3s ease;
@@ -216,14 +241,14 @@ nav ul li a::after { /* Subrayado animado */
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Subrayado amarillo */
     left: 0;
     bottom: -8px;
     transition: width 0.3s ease-out;
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Al pasar el ratón, el texto se vuelve amarillo */
     transform: translateY(-2px);
 }
 
@@ -231,10 +256,19 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Features Section */
+/* Features Section (Nuestros Servicios - Azul) */
 .features {
     text-align: center;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: var(--primary-color); /* Fondo azul */
+    color: var(--accent-color); /* Texto blanco */
+}
+
+.features h2 {
+    color: var(--accent-color); /* Título en blanco para esta sección */
+}
+
+.features h2::after {
+    background-color: var(--secondary-color); /* Subrayado en amarillo */
 }
 
 .feature-grid {
@@ -245,7 +279,7 @@ nav ul li a:hover::after {
 }
 
 .feature-item {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Degradado en la tarjeta */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)); /* Degradado suave en la tarjeta para destacarla */
     padding: 40px; /* Más padding */
     border-radius: 15px; /* Bordes más suaves */
     box-shadow: var(--shadow-light);
@@ -253,7 +287,8 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid var(--border-color); /* Borde sutil */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+    color: var(--text-color); /* Texto de las tarjetas oscuro */
 }
 
 .feature-item:hover {
@@ -265,8 +300,8 @@ nav ul li a:hover::after {
 .feature-item i { /* Cambio de img a i para Font Awesome */
     font-size: 3.5em; /* Tamaño del icono */
     margin-bottom: 25px;
-    background-color: var(--primary-color);
-    color: #ffffff; /* Color del icono */
+    background-color: var(--secondary-color); /* Icono en amarillo */
+    color: var(--dark-color); /* Color del icono oscuro */
     border-radius: 50%;
     width: 90px; /* Tamaño del círculo de fondo */
     height: 90px;
@@ -288,10 +323,19 @@ nav ul li a:hover::after {
     line-height: 1.7;
 }
 
-/* How It Works Section */
+/* How It Works Section (Cómo Funciona - Amarillo) */
 .how-it-works {
     text-align: center;
-    background: var(--gradient-section); /* Degradado suave */
+    background-color: var(--secondary-color); /* Fondo amarillo */
+    color: var(--dark-color); /* Texto oscuro */
+}
+
+.how-it-works h2 {
+    color: var(--dark-color); /* Título en oscuro para esta sección */
+}
+
+.how-it-works h2::after {
+    background-color: var(--primary-color); /* Subrayado en azul */
 }
 
 .steps-grid {
@@ -302,7 +346,7 @@ nav ul li a:hover::after {
 }
 
 .step-item {
-    background-color: #ffffff;
+    background-color: var(--accent-color); /* Fondo de la tarjeta en blanco */
     padding: 40px;
     border-radius: 15px;
     box-shadow: var(--shadow-light);
@@ -313,6 +357,7 @@ nav ul li a:hover::after {
     padding-top: 70px; /* Espacio para el número */
     text-align: center;
     border: 1px solid var(--border-color);
+    color: var(--text-color); /* Texto de las tarjetas oscuro */
 }
 
 .step-number {
@@ -320,8 +365,8 @@ nav ul li a:hover::after {
     top: -30px; /* Más arriba */
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--accent-color); /* Color de acento */
-    color: #ffffff;
+    background-color: var(--primary-color); /* Número en azul */
+    color: var(--accent-color); /* Texto blanco */
     border-radius: 50%;
     width: 70px; /* Más grande */
     height: 70px;
@@ -331,7 +376,7 @@ nav ul li a:hover::after {
     font-size: 2.8em; /* Más grande */
     font-weight: 800;
     font-family: var(--font-heading);
-    border: 6px solid var(--secondary-color); /* Borde con color de acento */
+    border: 6px solid var(--dark-color); /* Borde con color oscuro para contraste */
     box-shadow: var(--shadow-medium);
 }
 
@@ -347,7 +392,12 @@ nav ul li a:hover::after {
     line-height: 1.7;
 }
 
-/* About Us Section */
+/* About Us Section (Blanco) */
+.about-us {
+    background-color: var(--accent-color); /* Fondo blanco */
+    color: var(--text-color);
+}
+
 .about-us .container {
     display: flex;
     align-items: center;
@@ -388,17 +438,20 @@ nav ul li a:hover::after {
 .about-text h2 {
     text-align: left;
     margin-bottom: 30px;
+    color: var(--dark-color);
 }
 
 .about-text h2::after {
     left: 0;
     transform: translateX(0);
+    background-color: var(--primary-color); /* Subrayado en azul */
 }
 
-/* Contact Section */
+/* Contact Section (Blanco) */
 .contact {
     text-align: center;
-    background: var(--gradient-section); /* Degradado suave */
+    background-color: var(--accent-color); /* Fondo blanco */
+    color: var(--text-color);
 }
 
 .contact p {
@@ -448,7 +501,7 @@ nav ul li a:hover::after {
 .form-group textarea:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 4px rgba(255, 127, 80, 0.2); /* Sombra de foco más prominente */
+    box-shadow: 0 0 0 4px rgba(0, 51, 160, 0.2); /* Sombra de foco azul canario */
 }
 
 .form-group textarea {
@@ -484,7 +537,7 @@ footer {
     font-family: var(--font-heading);
     font-size: 2.5em;
     font-weight: 900;
-    color: #ffffff;
+    color:var(--primary-color);
 }
 
 .footer-logo .highlight {
