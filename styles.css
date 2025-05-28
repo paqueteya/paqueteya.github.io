@@ -198,6 +198,84 @@ p {
     font-family: var(--font-alt); /* Fuente más cálida */
 }
 
+/* ... tu código CSS existente hasta aquí ... */
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0; /* Más padding */
+    position: relative;
+    z-index: 100; /* Asegura que la nav esté siempre visible */
+}
+
+/* ... resto de estilos de nav ... */
+
+/* Nuevo estilo para el logo redondo en la esquina superior izquierda */
+.logo-top-left {
+    position: absolute; /* Posicionamiento absoluto para colocarlo libremente */
+    top: 20px; /* Distancia desde arriba */
+    left: 20px; /* Distancia desde la izquierda */
+    z-index: 101; /* Asegura que esté por encima de la navegación */
+    width: 80px; /* Tamaño del logo */
+    height: 80px;
+    border-radius: 50%; /* Hace el logo redondo */
+    overflow: hidden; /* Recorta la imagen para que sea redonda */
+    box-shadow: var(--shadow-medium); /* Añade una sombra sutil */
+    border: 3px solid var(--primary-color); /* Borde con el color principal */
+    display: flex; /* Para centrar la imagen dentro del div */
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-top-left img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* Ajustes adicionales para que la barra de navegación y el hero no interfieran */
+.hero {
+    position: relative; /* Es importante que el hero tenga position relative para que el logo absoluto se posicione respecto a él */
+    /* ... (resto de tus estilos de hero) ... */
+}
+
+nav {
+    position: relative; /* Asegura que la nav tenga un z-index adecuado si se superpone */
+    z-index: 100; /* Asegura que la nav esté por debajo del logo */
+    /* ... (resto de tus estilos de nav) ... */
+}
+
+/* Media Queries para ajustar el tamaño del logo en móviles */
+@media (max-width: 992px) {
+    .logo-top-left {
+        width: 70px; /* Un poco más pequeño en tablets */
+        height: 70px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-top-left {
+        width: 60px; /* Más pequeño en móviles */
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    /* Si la nav se vuelve una columna, puede que necesites ajustar el padding del hero */
+    .hero {
+        padding-top: 100px; /* O el valor que consideres para que el logo no tape el contenido */
+    }
+}
+
+/* --- Features Section (Nuestros Servicios - Azul) --- */
+.features {
+    text-align: center;
+    /* ... tu código CSS existente continúa aquí ... */
+}
 /* Navbar */
 nav {
     display: flex;
