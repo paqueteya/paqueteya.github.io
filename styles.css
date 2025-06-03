@@ -1,24 +1,21 @@
 :root {
-    --primary-color: #0033A0; /* Azul bandera canaria */
-    --secondary-color: #FFCC00; /* Amarillo bandera canaria */
-    --accent-color: #FFFFFF; /* Blanco puro */
-    --dark-color: #1A1A1A; /* Gris oscuro para contraste */
-    --light-color: #F5F5F5; /* Gris claro para fondos suaves */
-    --text-color: #222222; /* Texto principal */
-    --gray-text: #555555; /* Texto secundario */
-    --border-color: #DADADA; /* Bordes suaves */
+    --primary-color: #0033A0;
+    --secondary-color: #FFCC00;
+    --accent-color: #FFFFFF;
+    --dark-color: #1A1A1A;
+    --light-color: #F5F5F5;
+    --text-color: #222222;
+    --gray-text: #555555;
+    --border-color: #DADADA;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Poppins', sans-serif;
     --font-alt: 'Nunito', sans-serif;
     --shadow-light: 0 6px 12px rgba(0, 0, 0, 0.05);
     --shadow-medium: 0 12px 24px rgba(0, 0, 0, 0.15);
-
-    /* Eliminamos los degradados originales para ajustarnos a los colores planos de la bandera */
-    --gradient-hero: var(--accent-color); /* Blanco para la primera sección */
-    --gradient-section: var(--light-color); /* Usaremos este para fondos generales si no especificamos otro */
+    --gradient-hero: var(--accent-color);
+    --gradient-section: var(--light-color);
 }
 
-/* Reset y Estilos Generales */
 * {
     margin: 0;
     padding: 0;
@@ -27,25 +24,25 @@
 
 body {
     font-family: var(--font-body);
-    line-height: 1.7; /* Mayor espaciado para mejor lectura */
+    line-height: 1.7;
     color: var(--text-color);
-    background-color: #ffffff; /* Fondo blanco puro */
-    scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+    background-color: #ffffff;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 25px; /* Más padding para los lados */
+    padding: 0 25px;
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-color); /* Enlaces en azul canario */
+    color: var(--primary-color);
 }
 
 a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón para los enlaces */
+    text-decoration: underline;
 }
 
 ul {
@@ -56,19 +53,19 @@ h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--dark-color);
     margin-bottom: 20px;
-    font-weight: 800; /* Más audaz para títulos */
+    font-weight: 800;
 }
 
 h1 {
-    font-size: 4.2em; /* Más grande y llamativo */
+    font-size: 4.2em;
     line-height: 1.1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Sombra sutil */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 h2 {
     font-size: 3em;
     text-align: center;
-    margin-bottom: 70px; /* Más espacio */
+    margin-bottom: 70px;
     position: relative;
     color: var(--dark-color);
 }
@@ -77,10 +74,10 @@ h2::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -20px; /* Un poco más abajo */
+    bottom: -20px;
     transform: translateX(-50%);
-    width: 100px; /* Más ancho */
-    height: 5px; /* Más grueso */
+    width: 100px;
+    height: 5px;
     background-color: var(--primary-color);
     border-radius: 3px;
 }
@@ -102,59 +99,55 @@ p {
 }
 
 .section-padding {
-    padding: 120px 0; /* Más padding en las secciones */
-    position: relative; /* Para posibles fondos con formas */
+    padding: 120px 0;
+    position: relative;
 }
 
-/* --- CLASES DE COLOR DE LA BANDERA --- */
 .section-white {
-    background-color: var(--accent-color); /* Blanco para la primera parte */
+    background-color: var(--accent-color);
     color: var(--text-color);
 }
 
 .section-blue {
-    background-color: var(--primary-color); /* Azul para "Nuestros Servicios" */
-    color: var(--accent-color); /* Texto blanco sobre fondo azul */
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .section-yellow {
-    background-color: var(--secondary-color); /* Amarillo para "Cómo Funciona" */
-    color: var(--dark-color); /* Texto oscuro sobre fondo amarillo */
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
 }
-/* --- FIN CLASES DE COLOR DE LA BANDERA --- */
 
-
-/* Botones */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 18px 45px; /* Más grandes */
+    padding: 18px 45px;
     border-radius: 50px;
-    font-weight: 700; /* Más audaz */
+    font-weight: 700;
     transition: all 0.4s ease;
     text-align: center;
     font-family: var(--font-heading);
-    font-size: 1.2em; /* Más legible */
-    text-transform: uppercase; /* Mayúsculas */
+    font-size: 1.2em;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .btn-primary {
-    background-color: var(--primary-color); /* Botón principal en azul canario */
+    background-color: var(--primary-color);
     color: #ffffff;
     border: 2px solid var(--primary-color);
     box-shadow: var(--shadow-light);
 }
 
 .btn-primary:hover {
-    background-color: #00257a; /* Variante más oscura del azul */
+    background-color: #00257a;
     border-color: #00257a;
-    transform: translateY(-5px); /* Efecto 3D */
+    transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary-color); /* Botón secundario con texto azul y borde azul */
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
 
@@ -165,16 +158,13 @@ p {
     box-shadow: var(--shadow-light);
 }
 
-/* Header - Hero Section */
 .hero {
-    /* El fondo del hero ahora será blanco (accent-color) y el texto oscuro para visibilidad */
     background-color: var(--accent-color);
-    color: var(--text-color); /* Texto oscuro */
-    padding: 180px 0 120px; /* Más espacio */
+    color: var(--text-color);
+    padding: 180px 0 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* Mantenemos el clip-path si quieres la forma de onda, pero el fondo será blanco */
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
@@ -183,74 +173,56 @@ p {
     margin: 0 auto;
     padding-top: 60px;
     position: relative;
-    z-index: 2; /* Asegura el contenido por encima del clip-path */
+    z-index: 2;
 }
 
 .hero-content h1 {
-    color: var(--dark-color); /* Título del hero en color oscuro para contraste */
+    color: var(--dark-color);
 }
 
 .hero-content p {
-    font-size: 1.6em; /* Más grande */
+    font-size: 1.6em;
     margin-bottom: 50px;
-    color: var(--gray-text); /* Color más suave para el párrafo */
+    color: var(--gray-text);
     font-weight: 300;
-    font-family: var(--font-alt); /* Fuente más cálida */
+    font-family: var(--font-alt);
 }
 
-/* ... tu código CSS existente hasta aquí ... */
-
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0; /* Más padding */
+    padding: 25px 0;
     position: relative;
-    z-index: 100; /* Asegura que la nav esté siempre visible */
+    z-index: 100;
 }
 
-
-/* Nuevo estilo para el logo redondo en la esquina superior izquierda */
 .logo-top-left {
-    position: absolute; /* Posicionamiento absoluto para colocarlo libremente */
-    top: 20px; /* Distancia desde arriba */
-    left: 20px; /* Distancia desde la izquierda */
-    z-index: 101; /* Asegura que esté por encima de la navegación */
-    width: 80px; /* Tamaño del logo */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 101;
+    width: 80px;
     height: 80px;
-    border-radius: 50%; /* Hace el logo redondo */
-    overflow: hidden; /* Recorta la imagen para que sea redonda */
-    box-shadow: var(--shadow-medium); /* Añade una sombra sutil */
-    border: 3px solid var(--primary-color); /* Borde con el color principal */
-    display: flex; /* Para centrar la imagen dentro del div */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    border: 3px solid var(--primary-color);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .logo-top-left img {
-    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionarse */
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    object-fit: cover;
+    display: block;
 }
 
-/* Ajustes adicionales para que la barra de navegación y el hero no interfieran */
-.hero {
-    position: relative; /* Es importante que el hero tenga position relative para que el logo absoluto se posicione respecto a él */
-    /* ... (resto de tus estilos de hero) ... */
-}
-
-nav {
-    position: relative; /* Asegura que la nav tenga un z-index adecuado si se superpone */
-    z-index: 100; /* Asegura que la nav esté por debajo del logo */
-    /* ... (resto de tus estilos de nav) ... */
-}
-
-/* Media Queries para ajustar el tamaño del logo en móviles */
 @media (max-width: 992px) {
     .logo-top-left {
-        width: 70px; /* Un poco más pequeño en tablets */
+        width: 70px;
         height: 70px;
         top: 15px;
         left: 15px;
@@ -259,42 +231,26 @@ nav {
 
 @media (max-width: 768px) {
     .logo-top-left {
-        width: 60px; /* Más pequeño en móviles */
+        width: 60px;
         height: 60px;
         top: 10px;
         left: 10px;
     }
-    /* Si la nav se vuelve una columna, puede que necesites ajustar el padding del hero */
     .hero {
-        padding-top: 100px; /* O el valor que consideres para que el logo no tape el contenido */
+        padding-top: 100px;
     }
-}
-
-/* --- Features Section (Nuestros Servicios - Azul) --- */
-.features {
-    text-align: center;
-    /* ... tu código CSS existente continúa aquí ... */
-}
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0; /* Más padding */
-    position: relative;
-    z-index: 100; /* Asegura que la nav esté siempre visible */
 }
 
 nav .logo {
     font-family: var(--font-heading);
-    font-size: 2.8em; /* Más grande */
-    font-weight: 900; /* Extra bold */
-    color: var(--primary-color); /* Logo en azul canario */
+    font-size: 2.8em;
+    font-weight: 900;
+    color: var(--primary-color);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 nav .logo .highlight {
-    color: var(--secondary-color); /* Amarillo en el logo */
+    color: var(--secondary-color);
 }
 
 nav ul {
@@ -302,30 +258,30 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 40px; /* Más espacio */
+    margin-left: 40px;
 }
 
 nav ul li a {
-    color: var(--dark-color); /* Enlaces del nav en color oscuro */
+    color: var(--dark-color);
     font-weight: 600;
-    font-size: 1.2em; /* Más grande */
+    font-size: 1.2em;
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
 }
 
-nav ul li a::after { /* Subrayado animado */
+nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: var(--secondary-color); /* Subrayado amarillo */
+    background-color: var(--secondary-color);
     left: 0;
     bottom: -8px;
     transition: width 0.3s ease-out;
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color); /* Al pasar el ratón, el texto se vuelve amarillo */
+    color: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -333,56 +289,54 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Features Section (Nuestros Servicios - Azul) */
 .features {
     text-align: center;
-    background-color: var(--primary-color); /* Fondo azul */
-    color: var(--accent-color); /* Texto blanco */
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .features h2 {
-    color: var(--accent-color); /* Título en blanco para esta sección */
+    color: var(--accent-color);
 }
 
 .features h2::after {
-    background-color: var(--secondary-color); /* Subrayado en amarillo */
+    background-color: var(--secondary-color);
 }
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tarjetas más grandes */
-    gap: 50px; /* Más espacio entre tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
     margin-top: 80px;
 }
 
 .feature-item {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)); /* Degradado suave en la tarjeta para destacarla */
-    padding: 40px; /* Más padding */
-    border-radius: 15px; /* Bordes más suaves */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9));
+    padding: 40px;
+    border-radius: 15px;
     box-shadow: var(--shadow-light);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
-    color: var(--text-color); /* Texto de las tarjetas oscuro */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
 }
 
 .feature-item:hover {
-    transform: translateY(-15px) rotateX(3deg); /* Efecto más dinámico */
+    transform: translateY(-15px) rotateX(3deg);
     box-shadow: var(--shadow-medium);
 }
 
-/* ESTILO DE LOS ICONOS DE SERVICIOS (ANTES IMAGEN, AHORA FONT AWESOME) */
-.feature-item i { /* Cambio de img a i para Font Awesome */
-    font-size: 3.5em; /* Tamaño del icono */
+.feature-item i {
+    font-size: 3.5em;
     margin-bottom: 25px;
-    background-color: var(--secondary-color); /* Icono en amarillo */
-    color: var(--dark-color); /* Color del icono oscuro */
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
     border-radius: 50%;
-    width: 90px; /* Tamaño del círculo de fondo */
+    width: 90px;
     height: 90px;
-    display: flex; /* Para centrar el icono dentro del círculo */
+    display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow-light);
@@ -400,19 +354,18 @@ nav ul li a:hover::after {
     line-height: 1.7;
 }
 
-/* How It Works Section (Cómo Funciona - Amarillo) */
 .how-it-works {
     text-align: center;
-    background-color: var(--secondary-color); /* Fondo amarillo */
-    color: var(--dark-color); /* Texto oscuro */
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
 }
 
 .how-it-works h2 {
-    color: var(--dark-color); /* Título en oscuro para esta sección */
+    color: var(--dark-color);
 }
 
 .how-it-works h2::after {
-    background-color: var(--primary-color); /* Subrayado en azul */
+    background-color: var(--primary-color);
 }
 
 .steps-grid {
@@ -423,7 +376,7 @@ nav ul li a:hover::after {
 }
 
 .step-item {
-    background-color: var(--accent-color); /* Fondo de la tarjeta en blanco */
+    background-color: var(--accent-color);
     padding: 40px;
     border-radius: 15px;
     box-shadow: var(--shadow-light);
@@ -431,29 +384,29 @@ nav ul li a:hover::after {
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding-top: 70px; /* Espacio para el número */
+    padding-top: 70px;
     text-align: center;
     border: 1px solid var(--border-color);
-    color: var(--text-color); /* Texto de las tarjetas oscuro */
+    color: var(--text-color);
 }
 
 .step-number {
     position: absolute;
-    top: -30px; /* Más arriba */
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--primary-color); /* Número en azul */
-    color: var(--accent-color); /* Texto blanco */
+    background-color: var(--primary-color);
+    color: var(--accent-color);
     border-radius: 50%;
-    width: 70px; /* Más grande */
+    width: 70px;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.8em; /* Más grande */
+    font-size: 2.8em;
     font-weight: 800;
     font-family: var(--font-heading);
-    border: 6px solid var(--dark-color); /* Borde con color oscuro para contraste */
+    border: 6px solid var(--dark-color);
     box-shadow: var(--shadow-medium);
 }
 
@@ -469,16 +422,15 @@ nav ul li a:hover::after {
     line-height: 1.7;
 }
 
-/* About Us Section (Blanco) */
 .about-us {
-    background-color: var(--accent-color); /* Fondo blanco */
+    background-color: var(--accent-color);
     color: var(--text-color);
 }
 
 .about-us .container {
     display: flex;
     align-items: center;
-    gap: 80px; /* Más espacio */
+    gap: 80px;
     flex-wrap: wrap;
 }
 
@@ -491,7 +443,7 @@ nav ul li a:hover::after {
 
 .about-image {
     flex: 1;
-    min-width: 350px; /* Imagen más grande */
+    min-width: 350px;
     position: relative;
 }
 
@@ -499,7 +451,7 @@ nav ul li a:hover::after {
     max-width: 100%;
     border-radius: 15px;
     box-shadow: var(--shadow-medium);
-    transform: rotate(-3deg); /* Ligera inclinación para un toque moderno */
+    transform: rotate(-3deg);
     transition: transform 0.4s ease;
 }
 
@@ -521,28 +473,27 @@ nav ul li a:hover::after {
 .about-text h2::after {
     left: 0;
     transform: translateX(0);
-    background-color: var(--primary-color); /* Subrayado en azul */
+    background-color: var(--primary-color);
 }
 
-/* Contact Section (Blanco) */
 .contact {
     text-align: center;
-    background-color: var(--accent-color); /* Fondo blanco */
+    background-color: var(--accent-color);
     color: var(--text-color);
 }
 
 .contact p {
-    font-size: 1.3em; /* Más grande */
+    font-size: 1.3em;
     margin-bottom: 50px;
     color: var(--dark-color);
     font-family: var(--font-alt);
 }
 
 .contact-form {
-    max-width: 650px; /* Formulario un poco más ancho */
+    max-width: 650px;
     margin: 0 auto;
     background-color: #ffffff;
-    padding: 50px; /* Más padding */
+    padding: 50px;
     border-radius: 15px;
     box-shadow: var(--shadow-medium);
     border: 1px solid var(--border-color);
@@ -555,7 +506,7 @@ nav ul li a:hover::after {
 
 .form-group label {
     display: block;
-    font-size: 1.2em; /* Más grande */
+    font-size: 1.2em;
     margin-bottom: 10px;
     color: var(--dark-color);
     font-weight: 700;
@@ -565,9 +516,9 @@ nav ul li a:hover::after {
 .form-group input[type="email"],
 .form-group textarea {
     width: 100%;
-    padding: 18px; /* Más padding */
+    padding: 18px;
     border: 1px solid var(--border-color);
-    border-radius: 10px; /* Bordes más suaves */
+    border-radius: 10px;
     font-size: 1.1em;
     font-family: var(--font-body);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -578,28 +529,27 @@ nav ul li a:hover::after {
 .form-group textarea:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 4px rgba(0, 51, 160, 0.2); /* Sombra de foco azul canario */
+    box-shadow: 0 0 0 4px rgba(0, 51, 160, 0.2);
 }
 
 .form-group textarea {
     resize: vertical;
-    min-height: 150px; /* Altura mínima */
+    min-height: 150px;
 }
 
 .contact-form button {
     width: auto;
-    padding: 18px 60px; /* Botón más grande */
+    padding: 18px 60px;
     font-size: 1.3em;
     cursor: pointer;
 }
 
-/* Footer */
 footer {
     background-color: var(--dark-color);
     color: #ffffff;
-    padding: 60px 0; /* Más padding */
+    padding: 60px 0;
     text-align: center;
-    border-top: 5px solid var(--primary-color); /* Borde superior de color primario */
+    border-top: 5px solid var(--primary-color);
 }
 
 .footer-content {
@@ -607,7 +557,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px; /* Más espacio */
+    gap: 30px;
 }
 
 .footer-logo {
@@ -630,7 +580,7 @@ footer {
 .footer-links ul {
     display: flex;
     justify-content: center;
-    gap: 25px; /* Más espacio */
+    gap: 25px; 
 }
 
 .footer-links ul li a {
@@ -648,27 +598,27 @@ footer {
     gap: 20px;
 }
 
-/* ESTILO DE LOS ICONOS DE REDES SOCIALES (ANTES IMAGEN, AHORA FONT AWESOME) */
-.social-links a i { /* Cambio de img a i para Font Awesome */
-    font-size: 1.5em; /* Tamaño del icono */
-    width: 40px; /* Tamaño del círculo de fondo */
+
+.social-links a i { 
+    font-size: 1.5em; 
+    width: 40px; 
     height: 40px;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.15); /* Fondo de icono más visible */
+    background-color: rgba(255, 255, 255, 0.15); 
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff; /* Color del icono */
-    display: flex; /* Para centrar el icono dentro del círculo */
+    color: #ffffff; 
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
 
-.social-links a i:hover { /* Cambio de img a i */
-    transform: translateY(-7px) rotate(5deg); /* Efecto más divertido */
+.social-links a i:hover { 
+    transform: translateY(-7px) rotate(5deg); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
     h1 {
         font-size: 3.2em;
@@ -737,7 +687,7 @@ footer {
 
     .hero {
         padding: 120px 0 80px;
-        clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); /* Ajuste para pantallas pequeñas */
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%); 
     }
 
     h1 {
@@ -779,11 +729,11 @@ footer {
         font-size: 1.1em;
     }
 
-    /* Ajuste para los iconos en móviles, si fuera necesario */
-    .feature-item i { /* Cambiado de img a i */
+    
+    .feature-item i { 
         width: 70px;
         height: 70px;
-        font-size: 3em; /* Ajuste del tamaño del icono */
+        font-size: 3em; 
     }
 
     .step-number {
