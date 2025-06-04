@@ -188,17 +188,6 @@ p {
     font-family: var(--font-alt);
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-size: 2.5em;
-    font-weight: 900;
-    color:var(--primary-color);
-}
-.logo .highlight {
-    color: var(--secondary-color);
-
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -208,27 +197,17 @@ nav {
     z-index: 100;
 }
 
-  
-    .hero {
-        padding-top: 100px;
-    }
-}
-
 nav .logo {
     font-family: var(--font-heading);
-    font-size: 2.8em; 
-    font-weight: 900; 
-    color: var(--primary-color); 
-    font-size: 2.8em;
+    font-size: 2.8em; /* Puedes ajustar este tamaño si quieres que sea diferente al del footer */
     font-weight: 900;
     color: var(--primary-color);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Este es el highlight visual que mencionas */
 }
 
 nav .logo .highlight {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Esta es la clave para que el 'highlight' de color funcione */
 }
-
 nav ul {
     display: flex;
 }
