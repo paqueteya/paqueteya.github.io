@@ -188,6 +188,17 @@ p {
     font-family: var(--font-alt);
 }
 
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.5em;
+    font-weight: 900;
+    color:var(--primary-color);
+}
+.logo .highlight {
+    color: var(--secondary-color);
+
+}
+
 nav {
     display: flex;
     justify-content: space-between;
